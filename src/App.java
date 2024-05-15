@@ -87,7 +87,7 @@ public class App {
         if (num3 > mayor) {
             mayor = num3;
         }
-        System.out.println("El número mayor es " + mayor);
+        System.out.println("El número mayor es:" + mayor);
     }
     }
 
