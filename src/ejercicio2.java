@@ -25,5 +25,7 @@ public class ejercicio2 {
             mayor = num3;
         }
         System.out.println("El número mayor es:" + mayor);
+
+        scanner.close();
     }
 }

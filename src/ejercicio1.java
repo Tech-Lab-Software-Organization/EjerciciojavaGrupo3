@@ -17,5 +17,7 @@ public class ejercicio1 {
         for (int j = numeros.length - 1; j >= 0; j--) {
             System.out.println(numeros[j]);
         }
+
+        scanner.close();
     }
 }

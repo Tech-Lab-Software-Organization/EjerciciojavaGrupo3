@@ -21,7 +21,28 @@ public class ejercicio7 {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                if (esPuntoDeSilla(matriz, i, j, rows, cols)) {
+                int valor = matriz[i][j];
+
+                // Verificar si es el mínimo en la fila
+                boolean esMinimoEnFila = true;
+                for (int k = 0; k < cols; k++) {
+                    if (matriz[i][k] < valor) {
+                        esMinimoEnFila = false;
+                        break;
+                    }
+                }
+
+                // Verificar si es el máximo en la columna
+                boolean esMaximoEnColumna = true;
+                for (int l = 0; l < rows; l++) {
+                    if (matriz[l][j] > valor) {
+                        esMaximoEnColumna = false;
+                        break;
+                    }
+                }
+
+                // Si es punto de silla
+                if (esMinimoEnFila && esMaximoEnColumna) {
                     System.out.println("Punto de silla encontrado en [" + i + "][" + j + "] con valor " + matriz[i][j]);
                     puntoDeSillaEncontrado = true;
                 }
@@ -31,27 +52,6 @@ public class ejercicio7 {
         if (!puntoDeSillaEncontrado) {
             System.out.println("No se encontró ningún punto de silla en la matriz.");
         }
-    }
-
-    public static boolean esPuntoDeSilla(int[][] matriz, int fila, int columna, int totalFilas, int totalColumnas) {
-        int valor = matriz[fila][columna];
-
-        boolean esMinimoEnFila = true;
-        for (int j = 0; j < totalColumnas; j++) {
-            if (matriz[fila][j] < valor) {
-                esMinimoEnFila = false;
-                break;
-            }
-        }
-
-        boolean esMaximoEnColumna = true;
-        for (int i = 0; i < totalFilas; i++) {
-            if (matriz[i][columna] > valor) {
-                esMaximoEnColumna = false;
-                break;
-            }
-        }
-
-        return esMinimoEnFila && esMaximoEnColumna;
+        scanner.close();
     }
 }
