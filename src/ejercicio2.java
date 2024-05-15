@@ -1,33 +1,11 @@
 import java.util.Scanner;
 
-public class App {
-    /**
-     * @param args
-     * @throws Exception
-     */
-    static Scanner scanner = new Scanner(System.in);
-
-    /**
-     * @param args
-     * @throws Exception
-     */
-    public static void main(String[] args) throws Exception {
-        }
+public class ejercicio2 {
     
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
 
-    private static void ejercicio6() {
-    }
-
-    private static void ejercicio5() {
-    }
-
-    private static void ejercicio4() {
-    }
-
-    private static void ejercicio3() {
-    }
-
-    private static void ejercicio2() {
         System.out.print("Ingresa el primer número: ");
         int num1 = scanner.nextInt();
 
@@ -48,6 +26,4 @@ public class App {
         }
         System.out.println("El número mayor es:" + mayor);
     }
-
-    
 }
